@@ -23,3 +23,23 @@ public:
         return ret;
     }
 };
+
+/* 优化 */
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        map<int,int> store_num;
+        vector<int> ret;
+        for(int i = 0 ;i  < nums.size(); i++)
+        {
+            if(store_num.count(target - nums[i]))
+            {
+                ret.push_back(store_num[target - nums[i]]);
+                ret.push_back(i);
+                return ret;
+            }
+            store_num[nums[i]] = i;
+        }    
+        return ret;
+    }
+};
