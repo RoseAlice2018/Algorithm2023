@@ -17,6 +17,7 @@ cpp_file="${current_date}.cpp"
 echo "#include<vector>
 #include<stack>
 #include<queue>
+#include<string>
 using namespace std;" > "${cpp_file}"
 
 #移动文件到文件夹里
